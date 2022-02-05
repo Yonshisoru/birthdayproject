@@ -73,7 +73,7 @@
         function f(){
         var now = new Date();
         var age = now.getDate()-dateEnd.getDate()==0?(now.getFullYear()-1998):(now.getFullYear()-1998-1);
-        var distance = dateEnd - now;
+        var distance = 0;
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));days = days<10?'0'+days:days;
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));hours = hours<10?'0'+hours:hours;
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));minutes = minutes<10?'0'+minutes:minutes;
