@@ -69,11 +69,11 @@
             });
         }
     var clockElement = document.getElementById('clock');
-    var dateEnd = new Date('Feb 11,2022 00:00:00');
+    var dateEnd = new Date('Feb 06,2022 02:37:00');
         function f(){
         var now = new Date();
         var age = now.getDate()-dateEnd.getDate()==0?(now.getFullYear()-1998):(now.getFullYear()-1998-1);
-        var distance = 0;
+        var distance = dateEnd - now;
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));days = days<10?'0'+days:days;
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));hours = hours<10?'0'+hours:hours;
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));minutes = minutes<10?'0'+minutes:minutes;
@@ -82,7 +82,7 @@
         document.getElementById("hours").innerHTML = hours;
         document.getElementById("minutes").innerHTML = minutes;
         document.getElementById("seconds").innerHTML = seconds;
-        if(distance<=0)
+        if(distance<0)
             window.open("home.html","_self");
         
         }
