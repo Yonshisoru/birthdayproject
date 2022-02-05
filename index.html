@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container h-100">
-        <div class="row h-100 justify-content-center align-items-center">
+        <div class="row justify-content-center align-items-center pt-5">
             <div class="col-auto"></div>
             <div class="col-12" id="clock" style="text-align: center;">
                 <a style="font-size:70%"> Happy 24th Birth Day </a><br>
@@ -22,10 +22,11 @@
                 <a id="hours" style="color:thistle"></a><a style="font-size:50%">H<a style="font-size:30%">ours</a></a>
                 <a id="minutes" style="color:thistle"></a><a style="font-size:50%">M<a style="font-size:30%">inutes</a></a>
                 <a id="seconds" style="color:thistle"></a><a style="font-size:50%">S<a style="font-size:30%">econds</a></a><br></div>
+                <a id="cardpick" data-toggle="modal" data-target="#exampleModalLong" onclick="getCard()" >
+                    Pick the fortune
+                  </a>
             </div>
-            <div class="col-auto"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" onclick="getCard()">
-                Pick the fortune
-              </button></div>
+            <div class="col-auto"></div>
             </div>
             </div>
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -97,6 +98,23 @@
         height:100%;
         background:url(./src/img/indexbg.jpg);
     }
+    #cardpick{
+        font-size: 30%;
+        font-weight: bold;
+        color:#fc4988;
+        text-shadow: -1px 0 black, 0 5px black, 3px 0 black, 0 -3px black;
+        background-color: transparent;
+        border: none;
+    }
+    #cardpick:hover{
+        font-size: 30%;
+        font-weight: bold;
+        color:blue;
+        text-shadow: -1px 0 white, 0 5px white, 3px 0 white, 0 -3px white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
     @font-face {
         font-family: myFirstFont;
         src: url(./src/font/Pastelskies-BPnw.ttf);
@@ -112,7 +130,7 @@
     #clock{
         color:#fff;
         border:black;
-        background-color: rgb(107, 107, 107,0.05);
+        background-color: rgb(107, 107, 107,0.3);
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
 
