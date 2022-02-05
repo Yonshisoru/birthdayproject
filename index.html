@@ -69,7 +69,9 @@
             });
         }
     var clockElement = document.getElementById('clock');
-    var dateEnd = new Date('Feb 06,2022 02:39:00');
+    var dateEnd = new Date('Feb 06,2022 02:50:00');
+    var counter = 0;
+    var inteval;
         function f(){
         var now = new Date();
         var age = now.getDate()-dateEnd.getDate()==0?(now.getFullYear()-1998):(now.getFullYear()-1998-1);
@@ -84,12 +86,8 @@
         document.getElementById("seconds").innerHTML = seconds;
         if(distance<0)
             window.open("home.html","_self");
-        
         }
-        function checkclick(){
-            console.log("click");
-        }
-        setInterval(f,1000);
+        inteval = setInterval(f,1000);
 </script>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
