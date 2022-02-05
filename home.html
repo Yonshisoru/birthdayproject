@@ -12,11 +12,16 @@
 </head>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<audio autoplay loop id="bgaudio">
+<audio loop id="bgaudio">
     <source src="/src/bgm/one-summer-day.mp3">
 </audio>
 <div class="container">
    <ul class="timeline">
+        <div class="row">
+            <div class="col-md-2 col-auto"></div>
+            <div class="col-auto"><button type="button" class="btn btn-info" onclick="playbg()">Play</button></div>
+            <div class="col"></div>
+        </div>
         <li>
          <!-- begin timeline-time -->
          <div class="timeline-time">
@@ -781,9 +786,15 @@ body{
     var seconds = 55;
     var clock = new Audio('./src/bgm/clock.mp3');
     var hbd = new Audio('./src/bgm/hbd.mp3');
-    var bg = new Audio('./src/bgm/one-summer-day.mp3');
+    var bg = document.getElementById('bgaudio');
     bg.volume = 0.2
-    bg.play();
+    var start = 0;
+    function playbg(){
+        bg.play();
+    }
+    $("bgaudio").on("ended", function() {
+        playbg();
+    });
     function preloadAudio(url) {
         var audio = new Audio();
         // once this file loads, it will call loadedAudio()
