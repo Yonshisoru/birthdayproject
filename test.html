@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="shortcut icon" type="image/x-icon" href="./src/img/Birthday-80_icon-icons.com_57369.ico" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <title>Birthday Project</title>
+
+</head>
+<body>
+
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-auto"></div>
+            <div class="col-12" id="clock" style="text-align: center;">
+                <a style="font-size:70%"> Happy 24th Birth Day </a><br>
+                <div>
+                <a id="days" style="color:thistle"></a><a style="font-size:50%">D<a style="font-size:30%">ays</a></a>
+                <a id="hours" style="color:thistle"></a><a style="font-size:50%">H<a style="font-size:30%">ours</a></a>
+                <a id="minutes" style="color:thistle"></a><a style="font-size:50%">M<a style="font-size:30%">inutes</a></a>
+                <a id="seconds" style="color:thistle"></a><a style="font-size:50%">S<a style="font-size:30%">econds</a></a><br></div>
+            </div>
+            <div class="col-auto"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" onclick="getCard()">
+                Launch demo modal
+              </button></div>
+            </div>
+            </div>
+            <!-- Modal -->
+<d class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var clockElement = document.getElementById('clock');
+    var dateEnd = new Date('Feb 11,2022 00:00:00');
+        function f(){
+        var now = new Date();
+        var age = now.getDate()-dateEnd.getDate()==0?(now.getFullYear()-1998):(now.getFullYear()-1998-1);
+        var distance = dateEnd - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));days = days<10?'0'+days:days;
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));hours = hours<10?'0'+hours:hours;
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));minutes = minutes<10?'0'+minutes:minutes;
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);seconds = seconds<10?'0'+seconds:seconds;
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+        if(distance<=0)
+            window.open("home.html","_self");
+        
+        }
+        setInterval(f,1000);
+</script>
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    body,html{
+        height:100%;
+        background:url(./src/img/indexbg.jpg);
+    }
+    @font-face {
+        font-family: myFirstFont;
+        src: url(./src/font/Pastelskies-BPnw.ttf);
+    }
+    #clock{
+        color:#fff;
+        border:black;
+        background-color: rgb(107, 107, 107,0.05);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+@media screen and (max-width: 1600px) {
+        #clock {
+        font-family: myFirstFont;
+        font-size: 150px;
+    }
+}
+@media screen and (max-width: 1200px) {
+        #clock {
+        font-family: myFirstFont;
+        font-size: 100px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #clock {
+        font-family: myFirstFont;
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #clock {
+        font-family: myFirstFont;
+        font-size: 75px;
+    }
+}
+.emoji{
+    font-size: 70%;
+}
+
+</style>
+</html>
