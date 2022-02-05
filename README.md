@@ -9,3 +9,6 @@
 🔸I know waiting is boring that why I made mini fortune taller with 'Tarot-Card' in major mrcana. (Card number 0-21)<br>
 <br>
 📌** Please play for fun only.❗️❗️ (Make sure you didn't use this for your relationship)
+<br>
+✈️Released in https://birthdayproject.vercel.app/✈️
+![alt text](https://github.com/Yonshisoru/birthdayproject/blob/main/src/img/indexbg.jpg)
