@@ -17,7 +17,7 @@
 </audio>
 <div class="container">
    <ul class="timeline">
-      <li>
+        <li>
          <!-- begin timeline-time -->
          <div class="timeline-time">
             <span class="date">11 February 2021</span>
@@ -781,6 +781,17 @@ body{
     var seconds = 55;
     var clock = new Audio('./src/bgm/clock.mp3');
     var hbd = new Audio('./src/bgm/hbd.mp3');
+    var bg = new Audio('./src/bgm/one-summer-day.mp3');
+    bg.volume = 0.2
+    bgo.play();
+    function preloadAudio(url) {
+        var audio = new Audio();
+        // once this file loads, it will call loadedAudio()
+        // the file will be kept by the browser as cache
+        audio.addEventListener('canplaythrough', loadedAudio, false);
+        audio.src = url;
+    }
+
     function timer(){
 
         time+=10;
@@ -802,8 +813,6 @@ body{
         if(time>=100)
         clearInterval(timerInterval);
     }
-    var audio = document.getElementById("bgaudio")
-    audio.volume = 0.2;
     document.getElementById("continuebtn").addEventListener('click',function(){
         this.style.display = "none";
         document.getElementById("hidden").style.opacity = "0";
