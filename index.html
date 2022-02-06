@@ -16,7 +16,9 @@
         <div class="row justify-content-center align-items-center pt-5">
             <div class="col-auto"></div>
             <div class="col-12" id="clock" style="text-align: center;">
-                <a style="font-size:70%"> Happy 24th Birth Day </a><br>
+                <a id="title" data-toggle="modal" data-target="#readme" onclick="readme()" >
+                    Happy 24th Birth Day
+                  </a>
                 <div>
                 <a id="days" style="color:thistle"></a><a style="font-size:50%">D<a style="font-size:30%">ays</a></a>
                 <a id="hours" style="color:thistle"></a><a style="font-size:50%">H<a style="font-size:30%">ours</a></a>
@@ -44,6 +46,30 @@
                   <div class="col p-0 m-0" id="cardImg" style="padding:0;margin:0;text-align: center;"></div>
                   <div class="col-auto p-0 m-0"></div>
                   <div class="col p-3" id="cardDesc"></div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="readme" tabindex="-1" role="dialog" aria-labelledby="readmeTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content  sticky-top">
+        <div class="modal-header" style="text-align: center;">
+          <h5 class="modal-title" id="readmeTitle">README.md</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-auto"></div>
+                    <div class="col-12">
+                        <embed src="./README.md" width="400px" height="400px">
+                    </div>
+                    <div class="col-auto"></div>
                 </div>
           </div>
         </div>
@@ -88,6 +114,9 @@
         document.getElementById("seconds").innerHTML = seconds;
         }
         inteval = setInterval(f,1000);
+        function readme(){
+
+        }
 </script>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -113,6 +142,9 @@
         text-shadow: -1px 0 white, 0 5px white, 3px 0 white, 0 -3px white;
         background-color: transparent;
         border: none;
+        cursor: pointer;
+    }
+    #title:hover{
         cursor: pointer;
     }
     @font-face {
