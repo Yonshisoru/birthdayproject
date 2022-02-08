@@ -11,6 +11,6 @@
 📌** Please play for fun only.❗️❗️ (Make sure you didn't use this for your relationship)
 <br>
 <br>
-✈️Released in https://birthdayproject.vercel.app/✈️
+✈️Released in https://birthdayproject.vercel.app/
 <br><br>
 ![alt text](https://github.com/Yonshisoru/birthdayproject/blob/main/src/img/indexbg.jpg)
